@@ -1,0 +1,13 @@
+<h1 class="text-center"><%= @list.name %></h1>
+
+
+<div class="card" style="width: 18rem;">
+ <% @list.movies.each do |movie|%>
+  <%= image_tag(movie.poster_url) %>
+  <div class="card-body">
+    <h5 class="card-title"><%= movie.title %></h5>
+    <p class="card-text"><%= movie.overview %></p>
+    <a href="#" class="btn btn-primary">Bookmark</a>
+    <% end %>
+  </div>
+</div>
